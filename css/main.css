@@ -1,0 +1,90 @@
+/*Reset all defaults to 0 so thst you can write your own css*/
+/*DONT RELY ON BROWSER DEFAULTS*/
+*{
+    border: none;
+    margin: none;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-size: 10px;
+    background-color:bisque;
+    color:burlywood;
+    font-family: Arial, Helvetica, sans-serif;
+}
+ header > h1 {
+text-align: center;
+padding: 8px;
+ }
+main { text-align: center;}
+
+article{
+    border-radius: 4px;
+    border-color: white;
+    border-style: dashed;
+
+    border: 8px solid gray;
+    display: inline-block;
+    margin-left: 12px;
+    margin-right: 12px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    margin: 10px 12px 10px 12px;
+    margin: 10px 12px;
+
+    text-align: left;
+    width: 25%;
+}
+
+article > h2 {
+    color: gray;
+    padding: 4px 8px;
+}
+
+ul{
+    list-style-type: none;
+}
+article:first-of-type {
+    border-color: white;
+}
+article:first-of-type h2 {
+    color: white;
+}
+#inprogress { border-color: red}
+#inprogress h2 { color: red;}
+
+#done { border-color: aqua;}
+#done h2 { color: aqua;}
+
+ul li {
+    padding: 6px 8px;
+    text-transform: uppercase;
+}
+
+#todo li:nth-child(odd) {
+    background-color:rgba(255, 255, 255, 0.2)
+}
+#inprogress li:nth-child(odd) {
+    background-color: rgba(255,0, 0, 0.5);
+}
+#done li:nth-child(odd) {
+    background-color: rgba(142, 204, 235, 0.5);
+}
+/* responsive codes */
+article {
+    width: 100%;
+    margin:15px 10px;
+
+}
+
+main {
+    margin: 0 12px
+}
+@media(min-width:960px) {
+    article {
+        width:25%;
+        margin:10px 12px;
+    }
+    main{ margin: 0;}
+}
