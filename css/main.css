@@ -16,6 +16,10 @@ body{
 text-align: center;
 padding: 8px;
  }
+ backgroundimage h1{
+    width: fit-content;
+    height: 20px;
+ }
 main { text-align: center;}
 
 article{
