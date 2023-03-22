@@ -1,20 +1,94 @@
-html, 
-
-body { 
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
+.hidden {
+    display: none;
 }
-/*body*/
+
 body {
-    background: #455345; 
-    font-family: sans-serif;
-    border-top: 5px solid #aa8ed8;
-
+    margin: 50px;
+    font-family: 'PT Serif', serif;
+    font-weight: 400;
+    margin: 0px;
+    padding: 0px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('../img/pink_texture_bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-size: 100%;
 }
-/*title*/
-h1 {
-    color: antiquewhite;
-    
+
+.tasks {
+    margin: 40px auto;
+    width: 240px;
+    background: #fff;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 1px 2px rgba(0, 0, 0.5);
+    border: 1px solid #d1d1d1;
+
+
+.task-header {
+    position: relative;
+    line-height: 4;
+    padding: 7px  15px;
+    color: #5d6b6c;
+    text-shadow: 0 1px rgba(255, 255, 255, 0.7);
+    background: #fff;
+    border-bottom: 1px solid #d1d1d1;
+    border: 3px 3px 0 0;
+    -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0.5) 0 1 rgba(0, 0, 0, 0.03);
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0.5) 0 1 rgba(0, 0, 0, 0.03);
+}
+
+.task-title {
+    line-height: inherit;
+    font-size: 14px;
+    font-weight: bold;
+    color: inherit;
+}
+
+.task-lists {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    margin-top: -11px;
+    padding: 10px 4px;
+    width: 19px;
+    height: 3px;
+    text-shadow: none;
+    color: transparent;
+}
+
+.task-lists::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -5px 00 -6px;
+    height: 4px;
+    width: 4px;
+    border: solid #554971;
+    border-width: 0 0 4px 4px;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform:  rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.tasks-list-cb:checked ~.task-list-mark:before {
+    display: block;
+}
+
+.task-list-desc {
+    font-weight: bold;
+    color: #777;
+}
+
+.tasks-list-cb:checked .task-list-desc {
+    color: #554971;
+    text-decoration: line-through;
 }
